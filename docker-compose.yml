@@ -1,0 +1,29 @@
+version: '3.4'
+
+services:
+  webapplication1:
+    image: ${DOCKER_REGISTRY-}webapplication1
+    build:
+      context: .
+      dockerfile: WebApplication1/Dockerfile
+
+  apis:
+    image: ${DOCKER_REGISTRY-}apis
+    build:
+      context: .
+      dockerfile: APIs/Dockerfile
+
+
+  webapplication2:
+    image: ${DOCKER_REGISTRY-}webapplication2
+    build:
+      context: .
+      dockerfile: WebApplication2/Dockerfile
+
+
+  webapi2:
+    image: ${DOCKER_REGISTRY-}webapi2
+    build:
+      context: .
+      dockerfile: WebAPI2\Dockerfile
+
